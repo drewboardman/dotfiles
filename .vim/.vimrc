@@ -41,10 +41,17 @@ call vundle#begin()
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 " ---------- End Vundle Block --------------
+
+" NerdTree config
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['.bundle', '.git']
+map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
+map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
