@@ -4,3 +4,5 @@ fontconfig/
 gtk-2.0
 chromium/
 google-chrome/
+VirtualBox/
+QtProject.conf

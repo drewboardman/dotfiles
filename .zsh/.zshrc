@@ -25,7 +25,7 @@ export TERM=xterm-termite
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# DISABLE_LS_COLORS="false"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -82,8 +82,10 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+# DIRCOLORS
+eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 # Example aliases
-alias ll="ls -latrh"
+alias ll="ls -latrhF"
 alias grep="grep -v grep | grep --color=auto"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
