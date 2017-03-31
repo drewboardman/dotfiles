@@ -87,5 +87,6 @@ eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 # Example aliases
 alias ll="ls -latrhF"
 alias grep="grep -v grep | grep --color=auto"
+alias pj="cd $HOME/projects"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
