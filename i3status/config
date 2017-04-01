@@ -11,6 +11,7 @@ general {
         interval = 5
 }
 
+order += "volume master"
 order += "disk /"
 order += "disk /home"
 order += "ethernet _first_"
@@ -33,4 +34,12 @@ disk "/" {
 
 disk "/home" {
   format = "home%avail"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
