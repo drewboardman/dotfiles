@@ -29,11 +29,11 @@ tztime local {
 }
 
 disk "/" {
-        format = "root %avail"
+        format = "root (%avail free)"
 }
 
 disk "/home" {
-  format = "home%avail"
+  format = "home (%avail free)"
 }
 
 volume master {
