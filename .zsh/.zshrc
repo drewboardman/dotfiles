@@ -88,5 +88,6 @@ eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 alias ll="ls -latrhF"
 alias grep="grep -v grep | grep --color=auto"
 alias pj="cd $HOME/projects"
+alias startvpn="sudo openvpn --config /etc/openvpn/client/US_East.conf &"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

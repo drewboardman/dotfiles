@@ -11,6 +11,7 @@ general {
         interval = 5
 }
 
+order += "path_exists VPN"
 order += "volume master"
 order += "disk /"
 order += "disk /home"
@@ -42,4 +43,9 @@ volume master {
         device = "default"
         mixer = "Master"
         mixer_idx = 0
+}
+
+path_exists VPN {
+# path exists when a VPN tunnel launched by nmcli/nm-applet is active
+  path = "/proc/sys/net/ipv4/conf/tun0"
 }
