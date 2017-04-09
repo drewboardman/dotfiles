@@ -11,6 +11,7 @@
   pr = pull --rebase
 [core]
   excludesfile = ~/.gitignore
+	pager = 
 [rebase]
   autosquash = true
 [format]

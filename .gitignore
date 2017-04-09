@@ -6,5 +6,9 @@ chromium/
 google-chrome/
 VirtualBox/
 QtProject.conf
-pulse/*
+pulse/
 *.swp
+Atlassian/
+vlc/
+transmission-daemon/
+pavucontrol.ini

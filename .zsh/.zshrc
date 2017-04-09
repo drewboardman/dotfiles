@@ -88,6 +88,7 @@ eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 alias ll="ls -latrhF"
 alias grep="grep -v grep | grep --color=auto"
 alias pj="cd $HOME/projects"
-alias startvpn="sudo openvpn --config /etc/openvpn/client/US_East.conf &"
+alias startvpn="sudo openvpn --config /etc/openvpn/client/US_East.conf"
+alias workvpn="sudo openconnect --servercert=sha256:38f15dd7180d9f0b639a390fc8bf267a05a203a079bf5c558b16bf38490a463b --authgroup='single-Factor Pulse Clients' --protocol=nc vpnuser.manheim.com --pid-file='/var/run/work-vpn.pid' --user=dboardman"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
