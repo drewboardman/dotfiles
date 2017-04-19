@@ -11,7 +11,8 @@ general {
         interval = 5
 }
 
-order += "path_exists VPN"
+order += "path_exists MANHEIM"
+order += "path_exists PIA"
 order += "volume master"
 order += "disk /"
 order += "disk /home"
@@ -45,7 +46,12 @@ volume master {
         mixer_idx = 0
 }
 
-path_exists VPN {
+path_exists PIA {
+# path exists when a VPN tunnel launched by nmcli/nm-applet is active
+  path = "/proc/sys/net/ipv4/conf/tun1"
+}
+
+path_exists MANHEIM {
 # path exists when a VPN tunnel launched by nmcli/nm-applet is active
   path = "/proc/sys/net/ipv4/conf/tun0"
 }
