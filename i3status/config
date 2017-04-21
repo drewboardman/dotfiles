@@ -11,8 +11,6 @@ general {
         interval = 5
 }
 
-# This is really the GPU temperature
-order += "cpu_temperature 0"
 order += "path_exists MANHEIM"
 order += "path_exists PIA"
 order += "volume master"
@@ -56,10 +54,4 @@ path_exists PIA {
 path_exists MANHEIM {
 # path exists when a VPN tunnel launched by nmcli/nm-applet is active
   path = "/proc/sys/net/ipv4/conf/tun0"
-}
-
-# really GPU temperature
-cpu_temperature 0 {
-        format = "GPU %degrees°C"
-        path = "/sys/class/drm/card0/device/hwmon/hwmon0/temp1_input"
 }
