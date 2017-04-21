@@ -39,6 +39,7 @@ set rtp+=~/.config/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
