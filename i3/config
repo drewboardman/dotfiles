@@ -98,11 +98,11 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
+bindsym $mod+1 workspace 1: browser
+bindsym $mod+2 workspace 2: terminal
+bindsym $mod+3 workspace 3: editor
+bindsym $mod+4 workspace 4: chat
+bindsym $mod+5 workspace 5: servers
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
