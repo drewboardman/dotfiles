@@ -12,6 +12,7 @@ set smartcase
 set history=50
 set ruler         " show the cursor position all the time
 set laststatus=2  " Always display the status line
+set statusline+=%F
 
 " Softtabs, 2 spaces
 set tabstop=2
