@@ -71,14 +71,19 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_tex_checkers = ['lacheck']
 
 " Cool Colors
 syntax enable
 set t_Co=256
-colorscheme atom-dark-256
+let g:rehash256 = 1
+" colorscheme atom-dark-256
+" colorscheme molokai
+
+colorscheme solarized
 set background=dark
 " needs to come AFTER background set
-highlight Comment ctermfg=DarkMagenta
+" highlight Comment ctermfg=DarkMagenta
 
 " Background color issue
 set term=screen-256color
