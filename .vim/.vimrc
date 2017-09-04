@@ -39,6 +39,7 @@ filetype off                  " required
 set rtp+=~/.config/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
