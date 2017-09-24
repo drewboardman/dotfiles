@@ -1,9 +1,15 @@
 " highlight and remove whitespace
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+" autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-nnoremap <Leader>ws :%s/\s\+$//e<CR>
+nnoremap <Leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" Markdown specific stuff
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=150 fo+=t
+
+" Use italics
+highlight Comment cterm=italic
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set hlsearch
@@ -36,7 +42,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -64,15 +70,15 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Syntastic syntax configuration
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_tex_checkers = ['lacheck']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_tex_checkers = ['lacheck']
 
 " Cool Colors
 syntax enable
@@ -85,6 +91,10 @@ colorscheme solarized
 set background=dark
 " needs to come AFTER background set
 " highlight Comment ctermfg=DarkMagenta
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
 
 " Background color issue
 set term=screen-256color
