@@ -13,3 +13,5 @@ vlc/
 transmission-daemon/
 pavucontrol.ini
 Trolltech.conf
+xm1/
+.vim/bundle/
