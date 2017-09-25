@@ -8,6 +8,7 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="gentoo"
+plugins=(bundler)
 
 export TERM=xterm-termite
 
@@ -76,6 +77,8 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+# load rbenv at shell start
+eval "$(rbenv init -)"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -90,5 +93,6 @@ alias grep="grep -v grep | grep --color=auto"
 alias pj="cd $HOME/projects"
 alias startvpn="sudo openvpn --config /etc/openvpn/client/US_East.conf --dev tun1"
 alias workvpn="sudo openconnect --servercert=sha256:38f15dd7180d9f0b639a390fc8bf267a05a203a079bf5c558b16bf38490a463b --authgroup='single-Factor Pulse Clients' --protocol=nc vpnuser.manheim.com --pid-file='/var/run/work-vpn.pid' --user=dboardman"
+alias rmswp="git ls-files | grep '\.swp$' | xargs git rm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

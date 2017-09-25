@@ -10,8 +10,8 @@
   st = status
   pr = pull --rebase
 [core]
-  excludesfile = ~/.gitignore
-	pager = 
+	excludesfile = /home/drew/.gitignore_global
+	pager =
 [rebase]
   autosquash = true
 [format]
