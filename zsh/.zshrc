@@ -10,7 +10,7 @@
 ZSH_THEME="gentoo"
 plugins=(bundler)
 
-export TERM=xterm-termite
+export TERM=xterm-256color
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
