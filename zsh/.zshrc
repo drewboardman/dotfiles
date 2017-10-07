@@ -78,6 +78,7 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 # load rbenv at shell start
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
