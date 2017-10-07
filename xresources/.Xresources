@@ -57,3 +57,6 @@
 !
 ! !Font
  URxvt.font: xft:Source Code Pro Medium:size=10:antialias=true
+! scrollbar is ugly
+ URxvt.scrollBar: false
+
