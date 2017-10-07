@@ -35,7 +35,7 @@ mouse_warping none
 focus_follows_mouse no
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
