@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
-echo "nameserver 8.8.4.4" | sudo tee -a /etc/resolv.conf
+sudo bash -c 'echo "nameserver 8.8.8.8" >> /etc/resolvconf/resolv.conf.d/head'
+sudo bash -c 'echo "nameserver 8.8.4.4" >> /etc/resolvconf/resolv.conf.d/head'

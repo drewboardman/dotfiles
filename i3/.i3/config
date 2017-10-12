@@ -34,6 +34,8 @@ mouse_warping none
 # do not focus mouse when you hover over shit
 focus_follows_mouse no
 
+# set wallpaper
+exec sh ~/.fehbg
 # start a terminal
 exec urxvtd
 bindsym $mod+Return exec urxvtc
