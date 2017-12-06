@@ -1,14 +1,12 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-  export ZSH=/home/drew/.oh-my-zsh
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="gentoo"
 plugins=(bundler)
+
+# Path to your oh-my-zsh installation.
+export ZSH=/home/drew/.oh-my-zsh
+
 
 # export TERM=xterm-256color
 export TERM=rxvt-unicode-256color
@@ -78,10 +76,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-# load rbenv at shell start
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -94,7 +88,6 @@ alias ll="ls -latrhF"
 alias grep="grep -v grep | grep --color=auto"
 alias pj="cd $HOME/projects"
 alias startvpn="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/US\ East.ovpn --auth-user-pass /etc/openvpn/login.txt --dev tun1"
-alias workvpn="sudo openconnect --juniper vpnuser.manheim.com"
+alias screen="xrandr --output HDMI-1-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1-1 --off"
 alias restartpulse="pulseaudio -k && pulseaudio --start && i3-msg restart"
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias path="sed 's/:/\n/g' <<< "$PATH""

@@ -29,10 +29,6 @@ set expandtab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
-" Make it obvious where 80 characters is
-" highlight ColorColumn ctermbg=magenta
-" call matchadd('ColorColumn', '\%81v', 100)
-
 " Numbers
 set number
 set numberwidth=5
@@ -100,10 +96,10 @@ let g:syntastic_tex_checkers = ['lacheck']
 syntax enable
 set t_Co=256
 let g:rehash256 = 1
-" colorscheme atom-dark-256
+colorscheme atom-dark-256
 " colorscheme molokai
 
-colorscheme solarized
+" colorscheme solarized
 set background=dark
 " needs to come AFTER background set
 " highlight Comment ctermfg=DarkMagenta
@@ -120,3 +116,8 @@ if &term =~ '256color'
   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
 endif
+
+" Make it obvious where 80 characters is
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
