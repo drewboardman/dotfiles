@@ -11,6 +11,7 @@ autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=150 fo+=t
 " Use italics
 highlight Comment cterm=italic
 
+set noswapfile    " swaps annoying
 set backspace=2   " Backspace deletes like most programs in insert mode
 set hlsearch
 set ignorecase
