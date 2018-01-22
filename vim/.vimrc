@@ -5,6 +5,15 @@
 " autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 nnoremap <Leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
+" Background color issue
+" set term=screen-256color
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
 " Markdown specific stuff
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=150 fo+=t
 
@@ -27,6 +36,9 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
+" /target has nonsense in it
+set wildignore+=*/target/*
+
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
@@ -42,9 +54,13 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'rking/ag.vim'
+Plugin 'ensime/ensime-vim'
 Plugin 'gmarik/Vundle.vim'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -66,6 +82,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" Go To Declaration for vim-ensime
+au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
+au FileType scala nnoremap <localleader>dv :EnDeclarationSplit<CR>
 
 " Tab completion
 "   " will insert tab at beginning of line,
@@ -108,15 +128,6 @@ set background=dark
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
-
-" Background color issue
-set term=screen-256color
-if &term =~ '256color'
-  " disable Background Color Erase (BCE) so that color schemes
-  " render properly when inside 256-color tmux and GNU screen.
-  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
-endif
 
 " Make it obvious where 80 characters is
 highlight ColorColumn ctermbg=magenta
