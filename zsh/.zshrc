@@ -1,15 +1,22 @@
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="gentoo"
-plugins=(bundler)
-
 # Path to your oh-my-zsh installation.
 export ZSH=/home/drew/.oh-my-zsh
 
+# These are the configs to your work VM
+export REACTIVEMQ_AMQ=nio://10.15.1.102:61616
+export SHERPA_DB_ADDRESS=http://10.15.1.102:8983/solr/
 
-# export TERM=xterm-256color
-export TERM=rxvt-unicode-256color
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+if [[ -n $SSH_CONNECTION ]]; then
+  ZSH_THEME="agnoster"
+else
+  ZSH_THEME="gentoo"
+fi
+
+plugins=(bundler git vi-mode)
+
+source $ZSH/oh-my-zsh.sh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,14 +56,6 @@ HIST_STAMPS="mm/dd/yyyy"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
-
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -80,7 +79,17 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
+# Need the sherpa binaries for work
+export PATH="$HOME/work/build_tools/bin:$PATH"
+
+# export TERM=xterm-256color
+# export TERM=rxvt-unicode-256color
+
+# need rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 # DIRCOLORS
 eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 # Example aliases
@@ -88,6 +97,21 @@ alias ll="ls -latrhF"
 alias grep="grep -v grep | grep --color=auto"
 alias pj="cd $HOME/projects"
 alias startvpn="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/US\ East.ovpn --auth-user-pass /etc/openvpn/login.txt --dev tun1"
-alias screen="xrandr --output HDMI-1-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1-1 --off"
+alias screen="xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --off"
 alias restartpulse="pulseaudio -k && pulseaudio --start && i3-msg restart"
 alias path="sed 's/:/\n/g' <<< "$PATH""
+alias vim="nvim"
+alias codemettle="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/codemettle.ovpn --dev tun0"
+function nms { 
+  cd ~/work/sherpa-evolved
+  sbt sessionService/universal:stage
+  cd nms-session-service
+  /bin/cp -f src/test/resources/* target/universal/stage/conf/
+  ./target/universal/stage/bin/nms-session-service
+}
+function se {
+  cd ~/work/sherpa-evolved/
+  sbt -jvm-debug 5005 run
+}
+function rmcontainers { sudo docker rm $(sudo docker ps -a -f status=exited -q) }
+function rmimages { sudo docker rmi $(sudo docker images -a -q) $(sudo docker images -f "dangling=true" -q) }
