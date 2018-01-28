@@ -15,7 +15,7 @@ if &term =~ '256color'
 endif
 
 " Markdown specific stuff
-autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=150 fo+=t
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=150 fo+=t textwidth=80
 
 " Use italics
 highlight Comment cterm=italic
