@@ -1,5 +1,5 @@
 #!/bin/bash
-set  -euo pipefail
+# set  -euo pipefail
 I1FS=$'\n\t'
 mkdir -p /tmp/adodefont
 cd /tmp/adodefont
