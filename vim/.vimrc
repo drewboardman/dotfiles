@@ -55,7 +55,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'rking/ag.vim'
-Plugin 'ensime/ensime-vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'tpope/vim-fugitive'
@@ -82,10 +81,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-
-" Go To Declaration for vim-ensime
-au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
-au FileType scala nnoremap <localleader>dv :EnDeclarationSplit<CR>
 
 " Tab completion
 "   " will insert tab at beginning of line,

@@ -8,7 +8,7 @@ export SHERPA_DB_ADDRESS=http://10.15.1.102:8983/solr/
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-if [[ -n $SSH_CONNECTION ]]; then
+if [[ -n $SSH_CLIENT || -n $REMOTEHOST ]] then
   ZSH_THEME="agnoster"
 else
   ZSH_THEME="gentoo"
