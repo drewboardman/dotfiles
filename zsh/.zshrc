@@ -102,6 +102,9 @@ alias restartpulse="pulseaudio -k && pulseaudio --start && i3-msg restart"
 alias path="sed 's/:/\n/g' <<< "$PATH""
 alias vim="nvim"
 alias codemettle="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/codemettle.ovpn --dev tun0"
+alias dota="setxkbmap -option && setxkbmap -option caps:none && xmodmap -e 'keycode 66=F13'"
+alias undota="setxkbmap -option && setxkbmap -option caps:escape"
+
 function nms { 
   cd ~/work/sherpa-evolved
   sbt sessionService/universal:stage

@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-scale '/home/drew/Downloads/hansolo.jpg' 
+'feh' '--bg-scale' '/home/drew/Downloads/hansolo.jpg' 
