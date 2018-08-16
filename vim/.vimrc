@@ -100,11 +100,11 @@ let g:syntastic_tex_checkers = ['lacheck']
 syntax enable
 set t_Co=256
 let g:rehash256 = 1
-" colorscheme atom-dark-256
+colorscheme atom-dark-256
 " colorscheme molokai
 
-colorscheme solarized
-set background=dark
+" colorscheme solarized
+" set background=dark
 " needs to come AFTER background set
 " highlight Comment ctermfg=DarkMagenta
 

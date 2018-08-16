@@ -1,0 +1,137 @@
+%
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=mygreylink     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{{\LARGE Drew Boardman}} & \href{mailto:drew.e.boardman@gmail.com}{drew.e.boardman@gmail.com}\\
+	{\footnotesize {Atlanta, GA 30308}} & {(772)-413-8043} \\
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+% CHANGE HEADER SOURCE HERE
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education}
+\begin{itemize}
+\item
+\ressubheading{\href{http://www.gatech.edu}{Georgia Institute of Technology}}{Atlanta, GA}{\href{http://www.catalog.gatech.edu/colleges/cos/physics/ugrad/phy/geninfo.php}{Bachelor of Science in Physics}}{Aug. 2006 -- May. 2010}
+\end{itemize} % End Education list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+\begin{itemize}
+\item
+  \ressubheading{\href{http://www.codemettle.com/}{Codemettle}}{Atlanta, GA}{Software Engineer (Mid)}{Dec. 2017 -- Current}
+    { \footnotesize
+    \begin{itemize}
+        \resitem{Scala, ScalaJS, ScalaJS-React}
+        \resitem{SOLR, ActiveMQ}
+        \resitem{Dev Ops: Docker, GitlabCI}
+    \end{itemize}
+    }
+\item
+  \ressubheading{\href{http://www.manheim.com/}{Manheim}}{Atlanta, GA}{Software Engineer (Mid)}{Feb. 2015 -- Dec. 2017}
+    { \footnotesize
+    \begin{itemize}
+        \resitem{Scala: Akka HTTP, ElasticSearch, some Gatling, strong focus on FP}
+        \resitem{Ruby: Rails, Sinatra. Capybara, RSpec for testing.}
+        \resitem{Javascript: Angular 2, Angular 1 (legacy), some CoffeeScript}
+        \resitem{Dev Ops: AWS, Docker, Jenkins for automated deploys (Groovy job DSL/BuildflowDSL)}
+        \resitem{Tooling: ArchLinux, VIM}
+    \end{itemize}
+    }
+\item
+\ressubheading{\href{http://www.clockwise.md/}{Clockwise.md}}{Atlanta, GA}{Developer Intern}{Nov. 2014 -- Feb. 2015}
+    { \footnotesize
+    \begin{itemize}
+        \resitem{Assist development on Rails 4/Sinatra startup}
+        \resitem{Capybara, RSpec}
+        \resitem{Work with small team of developers using agile practices}
+    \end{itemize}
+    }
+\item
+  \ressubheading{\href{http://www.stratexpartners.com/}{StratEx Partners}}{Chicago, IL}{Implementation Specialist}{Feb. 2013 -- Oct. 2013}
+    { \footnotesize
+    \begin{itemize}
+        \resitem{Lead the Electronic Data Interchange (EDI) team}
+        \resitem{Processed all weekly insurance EDI files across a variety of interchange standards}
+        \resitem{Focused on the starting-phase implementation of new clients}
+        \resitem{Reviewed financial and tax information for clients and all client employees}
+        \resitem{Collaborated 1-on-1 with client liaisons to ensure congruence with previous HR systems}
+    \end{itemize}
+    }
+
+  \item
+    \ressubheading{\href{http://phweb.physics.gatech.edu/research/jiang/members.html}{Georgia Institute of Technology}}{Atlanta, GA}{Dr. Zhigang Jiang - Research Assistant}{Feb. 2009 -- May 2010}
+    { \footnotesize
+    \begin{itemize}
+        \resitem{Specialized in the study of Fourier Transform Infrared Spectroscopy of exfoliated graphene}
+        \resitem{Assisted in thermal transport and charge carrier mobility measurements of graphene}
+        \resitem{Created samples using exfoliation and chemical vapor deposition (CVD) techniques}
+        \resitem{Expert in determining sample thickness using Micro-Raman spectroscopy}
+        \resitem{Lead research project probing the effect of sub-wavelength apertures and their uses in light amplification}
+    \end{itemize}
+    }
+  \item
+    \ressubheading{\href{http://www.magnet.fsu.edu/}{National High Magnetic Field Laboratory}}{Tallahassee, FL}{Certified User}{June 2009 - May 2010}
+    { \footnotesize
+    \begin{itemize}
+        \resitem{Explored the effectiveness of SiO$_{2}$ concentrations in graphene substrates}
+        \resitem{Acquired proficiency in cryogenics and their role in superconducting magnets}
+        \resitem{Worked within groups of industry leaders and distinguished professors}
+    \end{itemize}
+    }
+\end{itemize}
+\end{document}
