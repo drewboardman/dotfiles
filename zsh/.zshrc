@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/drew/.oh-my-zsh
+  export ZSH=/Users/drew.boardman/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -11,7 +11,6 @@ ZSH_THEME="gentoo"
 plugins=(bundler)
 
 # export TERM=xterm-256color
-export TERM=rxvt-unicode-256color
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -21,10 +20,7 @@ export TERM=rxvt-unicode-256color
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# DISABLE_AUTO_UPDATE="true" # Uncomment the following line to change how often to auto-update (in days).  # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="false"
@@ -80,15 +76,13 @@ source $ZSH/oh-my-zsh.sh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 # load rbenv at shell start
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# DIRCOLORS
-eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 # Example aliases
 alias ll="ls -latrhF"
 alias grep="grep -v grep | grep --color=auto"
