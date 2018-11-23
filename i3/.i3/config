@@ -158,7 +158,6 @@ mode "resize" {
 }
 
 # Pulse Audio controls
-bindsym $mod+p exec "pulseaudio -k && pulseaudio --start && i3-msg restart"
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% || pactl set-sink-volume 0 -- +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% || pactl set-sink-volume 0 -- -5%
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
@@ -179,6 +178,10 @@ exec "xrandr --output eDP-1-1 --off --output HDMI-1-1 --off --output DP-1-1 --of
 
 ## Start nm-applet at startup
 exec --no-startup-id nm-applet
+
+## Fix for IntelliJ focus loss thing
+for_window [class="^jetbrains-.+"][window_type=dialog] focus
+for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
