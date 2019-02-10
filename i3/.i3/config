@@ -3,6 +3,8 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+# Hide top bar
+new_window pixel 0
 
 # i3 config file (v4)
 #
@@ -36,14 +38,12 @@ focus_follows_mouse no
 
 # set wallpaper
 exec sh ~/.fehbg
+
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# restart audio settings (do this a lot)
-bindsym $mod+p exec pulseaudio -k && pulseaudio --start && i3-msg restart
 
 # start dmenu (a program launcher)
 bindsym $mod+space exec dmenu_run
@@ -174,7 +174,7 @@ bindsym $mod+r mode "resize"
 exec "setxkbmap -option && setxkbmap -option caps:escape"
 
 ## Automatically switch to monitor
-exec "xrandr --output eDP-1-1 --off --output HDMI-1-1 --off --output DP-1-1 --off --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal"
+exec "/bin/bash /home/drew/.screenlayout/default.sh"
 
 ## Start nm-applet at startup
 exec --no-startup-id nm-applet
@@ -188,3 +188,17 @@ for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 bar {
         status_command i3status
 }
+
+# assign workspaces to screens
+workspace 1 output DisplayPort-1
+workspace 2 output HDMI-A-0
+workspace 3 output DisplayPort-1
+workspace 4 output HDMI-A-0
+workspace 5 output HDMI-A-0
+
+# move workspace manually
+bindsym $mod+Shift+greater move container to output right
+bindsym $mod+Shift+less move container to output left
+
+# IntelliJ is dumb
+for_window [class="^jetbrains-.+"][window_type=dialog] focus

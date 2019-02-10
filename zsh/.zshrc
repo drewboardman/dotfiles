@@ -80,8 +80,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Need the sherpa binaries for work
-export PATH="$HOME/work/build_tools/bin:$PATH"
+# Haskell packages
+# export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # export TERM=xterm-256color
 # export TERM=rxvt-unicode-256color
