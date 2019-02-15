@@ -102,6 +102,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# start stuff at startup
+exec --no-startup-id i3-msg 'workspace 1: browser; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 2: terminal; exec /usr/bin/gnome-terminal'
+
 # switch to workspace
 bindsym $mod+1 workspace 1: browser
 bindsym $mod+2 workspace 2: terminal
