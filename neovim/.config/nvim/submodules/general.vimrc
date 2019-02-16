@@ -7,8 +7,8 @@ nnoremap <Leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 highlight Comment cterm=italic
 
 set noswapfile    " swaps annoying
-set backspace=2   " Backspace deletes like most programs in insert mode
 set hlsearch
+set backspace=2   " Backspace deletes like most programs in insert mode
 set ignorecase
 set smartcase
 set history=50

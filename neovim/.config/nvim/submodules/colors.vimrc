@@ -20,7 +20,7 @@ colorscheme jellybeans
 
 set background=dark
 
-" Make line numbers a big more visible with a color matching jellybeans
+" Make line numbers a bit more visible with a color matching jellybeans
 highlight linenr ctermfg=179 guifg=#fad07a
 
 " Make the status bar and tabline look nicer
@@ -28,6 +28,13 @@ highlight StatusLine ctermbg=238 ctermfg=112 guibg=#404040 guifg=#b0cc55
 highlight StatusLineNC ctermfg=249 guifg=#909090
 highlight TabLine ctermbg=238 ctermfg=249 guibg=#404040  guifg=#909090
 highlight TabLineSel ctermbg=238 ctermfg=112 guibg=#404040 guifg=#b0cc55
+
+" Make it obvious where 80 characters is
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
+" Override shitty jellybean highlight colors
+highlight Search cterm = None guifg=black guibg=sienna2
 
 " Make the colors look nicer in the terminal, if supported.
 if s:truecolor || has('gui_running')
@@ -51,11 +58,3 @@ if s:truecolor || has('gui_running')
   let g:terminal_color_14='#54ced6' " cyan
   let g:terminal_color_15='#ffffff' " white
 endif
-
-" Make it obvious where 80 characters is
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
-
-" Override shitty jellybean highlight colors
-hi Search ctermfg=LightYellow
-hi Search ctermbg=Magenta
