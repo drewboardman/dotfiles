@@ -15,3 +15,5 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_tex_checkers = ['lacheck']
 
+" Search dotfiles (defaults to False)
+let g:ctrlp_show_hidden = 1
