@@ -54,31 +54,16 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
-" Prefer starting Intero manually (faster startup times)
-let g:intero_start_immediately = 1
-" Use ALE (works even when not using Intero)
-let g:intero_use_neomake = 0
+" Replaced Intero with language client
+set rtp+=~/.vim/pack/XXX/start/LanguageClient-neovim
+let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper'] }
+let g:LanguageClient_settingsPath = '/home/drew/dotfiles/neovim/.config/nvim/settings.json'
 
-augroup interoMaps
-  au!
-
-  au FileType haskell nnoremap <silent> <leader>io :InteroOpen<CR>
-  au FileType haskell nnoremap <silent> <leader>iov :InteroOpen<CR><C-W>H
-  au FileType haskell nnoremap <silent> <leader>ih :InteroHide<CR>
-  au FileType haskell nnoremap <silent> <leader>is :InteroStart<CR>
-  au FileType haskell nnoremap <silent> <leader>ik :InteroKill<CR>
-
-  au FileType haskell nnoremap <silent> <leader>wr :w \| :InteroReload<CR>
-  au FileType haskell nnoremap <silent> <leader>il :InteroLoadCurrentModule<CR>
-  au FileType haskell nnoremap <silent> <leader>if :InteroLoadCurrentFile<CR>
-
-  au FileType haskell map <leader>t <Plug>InteroGenericType
-  au FileType haskell map <leader>T <Plug>InteroType
-  au FileType haskell nnoremap <silent> <leader>it :InteroTypeInsert<CR>
-  au FileType haskell nnoremap <silent> <leader>ne :InteroEval<CR>
-
-  au FileType haskell nnoremap <silent> <leader>jd :InteroGoToDef<CR>
-  au FileType haskell nnoremap <silent> <leader>iu :InteroUses<CR>
-  au FileType haskell nnoremap <leader>ist :InteroSetTargets<SPACE>
-augroup END
-
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+map <Leader>lk :call LanguageClient#textDocument_hover()<CR>
+map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
+map <Leader>lr :call LanguageClient#textDocument_rename()<CR>
+map <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
+map <Leader>lb :call LanguageClient#textDocument_references()<CR>
+map <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
+map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>

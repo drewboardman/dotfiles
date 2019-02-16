@@ -1,0 +1,6 @@
+{
+    "languageServerHaskell": {
+        "hlintOn": True,
+        "maxNumberOfProblems": 4
+    }
+}
