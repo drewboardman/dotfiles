@@ -56,7 +56,7 @@ tnoremap <C-l> <C-\><C-n><C-w>l
 
 " Replaced Intero with language client
 set rtp+=~/.vim/pack/XXX/start/LanguageClient-neovim
-let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper'] }
+let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper', '-d', '-l', '/home/drew/tmp/hie.log'] }
 let g:LanguageClient_settingsPath = '/home/drew/dotfiles/neovim/.config/nvim/settings.json'
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
