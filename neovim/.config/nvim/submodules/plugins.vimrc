@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'rking/ag.vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-markdown'

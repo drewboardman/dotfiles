@@ -17,6 +17,3 @@ let g:syntastic_tex_checkers = ['lacheck']
 
 " Search dotfiles (defaults to False)
 let g:ctrlp_show_hidden = 1
-"
-" Better CtrlP visibility
-highlight CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white

@@ -58,3 +58,6 @@ if s:truecolor || has('gui_running')
   let g:terminal_color_14='#54ced6' " cyan
   let g:terminal_color_15='#ffffff' " white
 endif
+
+" Better CtrlP visibility
+highlight CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white

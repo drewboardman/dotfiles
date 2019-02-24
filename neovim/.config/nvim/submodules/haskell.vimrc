@@ -19,6 +19,7 @@ let g:haskell_indent_let_no_in = 0
 
 " Indenting on save is too aggressive for me
 let g:hindent_on_save = 0
+let g:stylishask_on_save = 0
 
 " Helper function, called below with mappings
 function! HaskellFormat(which) abort
