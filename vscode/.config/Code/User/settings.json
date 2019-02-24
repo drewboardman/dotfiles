@@ -5,9 +5,10 @@
     "editor.fontSize": 17,
     "vim.hlsearch": true,
     "editor.fontFamily": "Source Code Pro Medium",
-    "keyboard.dispatch": "keyCode",
+    "keyboard.dispatch": "keyCode", // this is for remapping caps to ESC in Linux
     "vim.leader": " ",
     "vim.surround": true,
+    "editor.renderLineHighlight": "none",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<Leader>", "f", "s"],

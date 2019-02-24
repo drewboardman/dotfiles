@@ -21,7 +21,7 @@ colorscheme jellybeans
 set background=dark
 
 " Make line numbers a bit more visible with a color matching jellybeans
-highlight linenr ctermfg=179 guifg=#fad07a
+highlight linenr guifg=179 guifg=#fad07a
 
 " Make the status bar and tabline look nicer
 highlight StatusLine ctermbg=238 ctermfg=112 guibg=#404040 guifg=#b0cc55
@@ -30,11 +30,11 @@ highlight TabLine ctermbg=238 ctermfg=249 guibg=#404040  guifg=#909090
 highlight TabLineSel ctermbg=238 ctermfg=112 guibg=#404040 guifg=#b0cc55
 
 " Make it obvious where 80 characters is
-highlight ColorColumn ctermbg=magenta
+highlight ColorColumn guibg=darkmagenta guifg=white
 call matchadd('ColorColumn', '\%81v', 100)
 
 " Override shitty jellybean highlight colors
-highlight Search cterm = None guifg=black guibg=sienna2
+highlight Search cterm = None guifg=black guibg=burlywood
 
 " Make the colors look nicer in the terminal, if supported.
 if s:truecolor || has('gui_running')
