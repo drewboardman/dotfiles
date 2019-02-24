@@ -7,6 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'rking/ag.vim'
+Plugin 'vim-airline/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'airblade/vim-gitgutter'
