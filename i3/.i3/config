@@ -42,6 +42,9 @@ exec sh ~/.fehbg
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 
+# print screen like Mac
+bindsym --release Shift+Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Desktop'
+
 # kill focused window
 bindsym $mod+Shift+q kill
 

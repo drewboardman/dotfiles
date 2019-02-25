@@ -12,6 +12,7 @@ set backspace=2   " Backspace deletes like most programs in insert mode
 set ignorecase
 set smartcase
 set history=50
+set scrolloff=5
 set ruler         " show the cursor position all the time
 set laststatus=2  " Always display the status line
 set statusline+=%F
