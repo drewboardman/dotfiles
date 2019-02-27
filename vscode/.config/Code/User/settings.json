@@ -1,0 +1,35 @@
+{
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "languageServerHaskell.hieExecutablePath": "/home/drew/.local/bin/hie",
+    "editor.fontSize": 17,
+    "vim.hlsearch": true,
+    "editor.fontFamily": "Source Code Pro Medium",
+    "keyboard.dispatch": "keyCode", // this is for remapping caps to ESC in Linux
+    "vim.leader": " ",
+    "vim.surround": true,
+    "editor.renderLineHighlight": "none",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Leader>", "f", "s"],
+            "commands": [":w"]
+          },
+          {
+            "before": ["<C-j>"],
+            "after": ["<C-w>", "j"]
+          },
+          {
+            "before": ["<C-k>"],
+            "after": ["<C-w>", "k"]
+          },
+          {
+            "before": ["<C-h>"],
+            "after": ["<C-w>", "h"]
+          },
+          {
+            "before": ["<C-l>"],
+            "after": ["<C-w>", "l"]
+          }
+    ],
+    "editor.minimap.enabled": false
+}
