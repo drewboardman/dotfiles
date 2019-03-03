@@ -2,6 +2,7 @@
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/bin/nvim",
     "languageServerHaskell.hieExecutablePath": "/home/drew/.local/bin/hie",
+    "languageServerHaskell.useCustomHieWrapperPath": "/home/drew/.local/hie-wrapper",
     "editor.fontSize": 17,
     "vim.hlsearch": true,
     "editor.fontFamily": "Source Code Pro Medium",
