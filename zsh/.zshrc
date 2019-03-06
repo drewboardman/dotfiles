@@ -82,10 +82,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Haskell packages
 # export PATH="$HOME/.cabal/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-
-# GHCUP
 export PATH="$HOME/.cabal/bin:${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.ghcup/env:$PATH"
 
 # export TERM=xterm-256color
 # export TERM=rxvt-unicode-256color
