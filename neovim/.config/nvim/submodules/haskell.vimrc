@@ -18,14 +18,10 @@ let g:haskell_indent_let_no_in = 0
 " ----- hindent & stylish-haskell -----
 
 " Indenting on save is too aggressive for me
-let g:hindent_on_save = 0
 let g:stylishask_on_save = 0
 
 " Helper function, called below with mappings
 function! HaskellFormat(which) abort
-  if a:which ==# 'hindent' || a:which ==# 'both'
-    :Hindent
-  endif
   if a:which ==# 'stylish' || a:which ==# 'both'
     silent! exe 'undojoin'
     silent! exe 'keepjumps %!stylish-haskell'
@@ -35,12 +31,8 @@ endfunction
 " Key bindings
 augroup haskellStylish
   au!
-  " Just hindent
-  au FileType haskell nnoremap <leader>hi :Hindent<CR>
   " Just stylish-haskell
-  au FileType haskell nnoremap <leader>hh :call HaskellFormat('stylish')<CR>
-  " First hindent, then stylish-haskell
-  au FileType haskell nnoremap <leader>hf :call HaskellFormat('both')<CR>
+  au FileType haskell nnoremap <leader>hf :call HaskellFormat('stylish')<CR>
 augroup END
 
 " ----- w0rp/ale -----
@@ -56,9 +48,9 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
 " Prefer starting Intero manually (faster startup times)
-let g:intero_start_immediately = 1
+let g:intero_start_immediately = 0
 " Use ALE (works even when not using Intero)
-let g:intero_use_neomake = 0
+let g:intero_use_neomake = 1
 
 augroup interoMaps
   au!

@@ -201,11 +201,12 @@ bar {
 
 # assign workspaces to screens
 workspace 1 output eDP1
-# workspace 2 output HDMI-A-0
-workspace 2 output DP1
 workspace 3 output eDP1
+
+workspace 2 output DP1
 workspace 4 output DP1
 workspace 5 output DP1
+# workspace 2 output HDMI-A-0
 # workspace 4 output HDMI-A-0
 # workspace 5 output HDMI-A-0
 
@@ -214,4 +215,7 @@ bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
 
 # IntelliJ is dumb
+# you may also need to change this in IntelliJ
+# Help -> Edit Custom Properties
+# suppress.focus.stealing=false
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
