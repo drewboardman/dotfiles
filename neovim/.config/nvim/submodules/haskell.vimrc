@@ -38,7 +38,9 @@ augroup END
 " ----- w0rp/ale -----
 
 let g:ale_linters = {}
-let g:ale_linters.haskell = ['stack-ghc-mod', 'hlint']
+let g:ale_linters.haskell = ['hlint']
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
 
 " ----- parsonsmatt/intero-neovim -----
 " Ctrl-{hjkl} for navigating out of terminal panes
