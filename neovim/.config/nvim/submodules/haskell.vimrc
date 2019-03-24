@@ -47,6 +47,12 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
+" ----- hie ------
+let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper', '--lsp'] }
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <F1> :call LanguageClient#textDocument_hover()<CR>
+map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
+
 augroup ghcidMaps
   au!
   au FileType haskell nnoremap <silent> <leader>go :Ghcid<CR>
