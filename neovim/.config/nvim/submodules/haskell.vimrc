@@ -38,7 +38,7 @@ augroup END
 " ----- w0rp/ale -----
 
 let g:ale_linters = {}
-let g:ale_linters.haskell = ['hlint']
+let g:ale_linters.haskell = ['stack_ghc', 'hlint']
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 

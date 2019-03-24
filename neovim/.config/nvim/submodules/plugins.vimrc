@@ -17,7 +17,6 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'vim-syntastic/syntastic'
 Plugin 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'sbdchd/neoformat'
