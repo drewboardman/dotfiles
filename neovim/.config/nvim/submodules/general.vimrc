@@ -23,7 +23,8 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
-" /target has nonsense in it
+" better performance
+set wildignore+=*/.git/*,*/tmp/*,*.swp,*/dist/*,*/dist-newstyle/*,*/.stack-work/*,*/.idea/*
 set wildignore+=*/target/*
 
 " Display extra whitespace
