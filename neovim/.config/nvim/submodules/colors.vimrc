@@ -59,9 +59,5 @@ if s:truecolor || has('gui_running')
   let g:terminal_color_15='#ffffff' " white
 endif
 
-" ale
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-
 " Better CtrlP visibility
 highlight CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
