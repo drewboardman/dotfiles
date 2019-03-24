@@ -7,6 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'mileszs/ack.vim'
+Plugin 'lifepillar/vim-mucomplete'
 Plugin 'vim-airline/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'derekwyatt/vim-scala'
@@ -19,6 +20,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plugin 'neovimhaskell/haskell-vim'
+Plugin 'autozimu/LanguageClient-neovim'
 Plugin 'sbdchd/neoformat'
 Plugin 'alx741/vim-stylishask'
 Plugin 'w0rp/ale'

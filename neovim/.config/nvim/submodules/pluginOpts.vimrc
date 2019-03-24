@@ -6,3 +6,6 @@ map <silent> <Leader>nf :NERDTreeFind<CR>
 
 " Search dotfiles (defaults to False)
 let g:ctrlp_show_hidden = 1
+
+" enable MUcomplete
+set completeopt+=menuone
