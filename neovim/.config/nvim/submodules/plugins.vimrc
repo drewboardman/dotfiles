@@ -17,14 +17,14 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'sbdchd/neoformat'
 Plugin 'alx741/vim-stylishask'
-Plugin 'w0rp/ale'
 Plugin 'parsonsmatt/intero-neovim'
+Plugin 'w0rp/ale'
 Plugin 'godlygeek/tabular'
-Plugin 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 
 call vundle#end()            " required
 filetype plugin indent on    " required
