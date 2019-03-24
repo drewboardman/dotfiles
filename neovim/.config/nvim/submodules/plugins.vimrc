@@ -17,12 +17,11 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'sbdchd/neoformat'
 Plugin 'alx741/vim-stylishask'
-Plugin 'parsonsmatt/intero-neovim'
 Plugin 'w0rp/ale'
 Plugin 'godlygeek/tabular'
 

@@ -42,38 +42,16 @@ let g:ale_linters.haskell = ['hlint']
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
-" ----- parsonsmatt/intero-neovim -----
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
-" Prefer starting Intero manually (faster startup times)
-let g:intero_start_immediately = 0
-" Use ALE (works even when not using Intero)
-let g:intero_use_neomake = 1
-
-augroup interoMaps
+augroup ghcidMaps
   au!
-
-  au FileType haskell nnoremap <silent> <leader>io :InteroOpen<CR>
-  au FileType haskell nnoremap <silent> <leader>iov :InteroOpen<CR><C-W>H
-  au FileType haskell nnoremap <silent> <leader>ih :InteroHide<CR>
-  au FileType haskell nnoremap <silent> <leader>is :InteroStart<CR>
-  au FileType haskell nnoremap <silent> <leader>ik :InteroKill<CR>
-
-  au FileType haskell nnoremap <silent> <leader>wr :w \| :InteroReload<CR>
-  au FileType haskell nnoremap <silent> <leader>il :InteroLoadCurrentModule<CR>
-  au FileType haskell nnoremap <silent> <leader>if :InteroLoadCurrentFile<CR>
-
-  au FileType haskell map <leader>t <Plug>InteroGenericType
-  au FileType haskell map <leader>T <Plug>InteroType
-  au FileType haskell nnoremap <silent> <leader>it :InteroTypeInsert<CR>
-  au FileType haskell nnoremap <silent> <leader>ne :InteroEval<CR>
-
-  au FileType haskell nnoremap <silent> <leader>jd :InteroGoToDef<CR>
-  au FileType haskell nnoremap <silent> <leader>iu :InteroUses<CR>
-  au FileType haskell nnoremap <leader>ist :InteroSetTargets<SPACE>
+  au FileType haskell nnoremap <silent> <leader>go :Ghcid<CR>
+  au FileType haskell nnoremap <silent> <leader>gov :Ghcid<CR><C-W>H
+  au FileType haskell nnoremap <silent> <leader>gk :GhcidKill<CR>
 augroup END
 
