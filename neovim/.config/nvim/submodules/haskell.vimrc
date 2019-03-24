@@ -15,8 +15,6 @@ let g:haskell_indent_case_alternative = 1
 " Only next under 'let' if there's an equals sign
 let g:haskell_indent_let_no_in = 0
 
-" ----- hindent & stylish-haskell -----
-
 " Indenting on save is too aggressive for me
 let g:stylishask_on_save = 0
 
