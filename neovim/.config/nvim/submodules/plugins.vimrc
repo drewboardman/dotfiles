@@ -6,7 +6,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'derekwyatt/vim-scala'

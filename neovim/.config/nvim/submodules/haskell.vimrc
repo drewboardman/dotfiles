@@ -37,6 +37,7 @@ augroup END
 
 let g:ale_linters = {}
 let g:ale_linters.haskell = ['stack_ghc', 'hlint']
+let g:haskell_stack_ghc_options = [ '-Wall', '-Wcompat', '-Wincomplete-record-updates', '-Wincomplete-uni-patterns', '-Wredundant-constraints' ]
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
