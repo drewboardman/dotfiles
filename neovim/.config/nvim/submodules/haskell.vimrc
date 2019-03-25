@@ -36,15 +36,23 @@ augroup END
 " ----- w0rp/ale -----
 
 let g:ale_linters = {}
-let g:ale_linters.haskell = ['stack_ghc', 'hlint']
-let g:ale_haskell_stack_ghc_options = '
+let g:ale_linters.haskell = ['stack-ghc', 'hlint']
+let g:haskell_stack_ghc_options = '
+      \ -threaded
+      \ -rtsopts
+      \ -with-rtsopts=-N
       \ -Wall
       \ -Wcompat
       \ -Wincomplete-record-updates
       \ -Wincomplete-uni-patterns
-      \ -Wredundant-constraints'
+      \ -Wredundant-constraints
+      \ -Wmissing-import-lists
+      \ -Wmissing-export-lists
+      \'
+
 " Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
+" NOTE: this is causing X's to appear that have no value
+" let g:airline#extensions#ale#enabled = 1
 
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
@@ -57,6 +65,9 @@ let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper', '--lsp'] }
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <F1> :call LanguageClient#textDocument_hover()<CR>
 map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
+
+" ---- ghcid -----
+let g:ghcid_command = 'stack exec ghcid --'
 
 augroup ghcidMaps
   au!
