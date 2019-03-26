@@ -50,21 +50,11 @@ let g:ale_haskell_ghc_options = '
       \ -Wmissing-export-lists
       \'
 
-" Set this. Airline will handle the rest.
-" NOTE: this is causing X's to appear that have no value
-" let g:airline#extensions#ale#enabled = 1
-
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
-
-" " ----- hie ------
-" let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper', '--lsp'] }
-" nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-" nnoremap <F1> :call LanguageClient#textDocument_hover()<CR>
-" map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
 
 " ---- ghcid -----
 let g:ghcid_command = 'stack exec ghcid --'
