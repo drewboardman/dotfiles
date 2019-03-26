@@ -10,6 +10,10 @@ let g:ctrlp_show_hidden = 1
 " enable MUcomplete
 set completeopt+=menuone
 
+" fugitive
+cnoreabbrev gst Gstatus
+cnoreabbrev commit Gcommit
+
 " ale
 let g:ale_set_highlights = 0 " Disable highlights
 highlight clear ALEErrorSign

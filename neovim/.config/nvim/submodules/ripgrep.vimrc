@@ -4,7 +4,7 @@
 let g:ackprg = 'rg --hidden --vimgrep --no-heading --smart-case --glob "!.git/*"'
 
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>a :Ack! <cword><cr>
 
 " This tell ctrlp to use rg as well
 if executable('rg')
