@@ -36,8 +36,8 @@ augroup END
 " ----- w0rp/ale -----
 
 let g:ale_linters = {}
-let g:ale_linters.haskell = ['stack-ghc', 'hlint']
-let g:haskell_stack_ghc_options = '
+let g:ale_linters.haskell = ['ghc', 'hlint']
+let g:ale_haskell_ghc_options = '
       \ -threaded
       \ -rtsopts
       \ -with-rtsopts=-N
