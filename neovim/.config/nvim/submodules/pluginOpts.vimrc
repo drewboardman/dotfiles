@@ -12,8 +12,10 @@ set completeopt+=menuone
 
 " ale
 let g:ale_set_highlights = 0 " Disable highlights
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+let g:ale_sign_error = '💩'
+let g:ale_sign_warning = '🔧'
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_save = 1
 
