@@ -121,3 +121,8 @@ function se {
 }
 function rmcontainers { sudo docker rm $(sudo docker ps -a -f status=exited -q) }
 function rmimages { sudo docker rmi $(sudo docker images -a -q) $(sudo docker images -f "dangling=true" -q) }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+bindkey -r '^T'
+bindkey '^P' fzf-file-widget
