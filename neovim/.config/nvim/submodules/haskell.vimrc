@@ -36,19 +36,20 @@ augroup END
 " ----- w0rp/ale -----
 
 let g:ale_linters = {}
-let g:ale_linters.haskell = ['ghc', 'hlint']
-let g:ale_haskell_ghc_options = '
-      \ -threaded
-      \ -rtsopts
-      \ -with-rtsopts=-N
-      \ -Wall
-      \ -Wcompat
-      \ -Wincomplete-record-updates
-      \ -Wincomplete-uni-patterns
-      \ -Wredundant-constraints
-      \ -Wmissing-import-lists
-      \ -Wmissing-export-lists
-      \'
+let g:ale_linters.haskell = ['stack_ghc', 'hlint']
+let g:haskell_stack_ghc_options = '-Wall'
+" let g:haskell_stack_ghc_options = '
+"       \ -threaded
+"       \ -rtsopts
+"       \ -with-rtsopts=-N
+"       \ -Wall
+"       \ -Wcompat
+"       \ -Wincomplete-record-updates
+"       \ -Wincomplete-uni-patterns
+"       \ -Wredundant-constraints
+"       \ -Wmissing-import-lists
+"       \ -Wmissing-export-lists
+"       \'
 
 " Ctrl-{hjkl} for navigating out of terminal panes
 tnoremap <C-h> <C-\><C-n><C-w>h
