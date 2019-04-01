@@ -122,7 +122,7 @@ bindsym $mod+2 workspace 2: terminal
 bindsym $mod+3 workspace 3: editor
 bindsym $mod+4 workspace 4: chat
 bindsym $mod+5 workspace 5: servers
-bindsym $mod+6 workspace 6: remote/vpn
+bindsym $mod+6 workspace 6: gaming
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
@@ -209,6 +209,7 @@ workspace 2 output HDMI-A-0
 workspace 3 output DisplayPort-1
 workspace 4 output HDMI-A-0
 workspace 5 output HDMI-A-0
+workspace 6 output DisplayPort-1
 # workspace 2 output DP1
 # workspace 3 output eDP1
 # workspace 4 output DP1
@@ -220,3 +221,14 @@ workspace 5 output HDMI-A-0
 # Help -> Edit Custom Properties
 # suppress.focus.stealing=false
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
+
+# steam shit
+for_window [class="^Steam$" title="^Friends$"] floating enable
+for_window [class="^Steam$" title="Steam - Update News"] floating enable
+for_window [class="^Steam$" title=".* - Chat"] floating enable
+for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [class="^Steam$" title=".* - event started"] floating enable
+for_window [class="^Steam$" title=".* CD key"] floating enable
+for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^Steam$" title="Steam"] floating enable
