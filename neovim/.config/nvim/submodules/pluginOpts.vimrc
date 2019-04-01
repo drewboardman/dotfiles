@@ -4,16 +4,25 @@ let NERDTreeIgnore = ['.bundle', '.git']
 map <silent> <Leader>nt :NERDTreeToggle<CR>
 map <silent> <Leader>nf :NERDTreeFind<CR>
 
-" Syntastic syntax configuration
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_tex_checkers = ['lacheck']
-
 " Search dotfiles (defaults to False)
 let g:ctrlp_show_hidden = 1
+
+" enable MUcomplete
+set completeopt+=menuone
+
+" fugitive
+cnoreabbrev gst Gstatus
+cnoreabbrev commit Gcommit
+
+" ale
+let g:ale_set_highlights = 0 " Disable highlights
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+let g:ale_sign_error = '💩'
+let g:ale_sign_warning = '🔧'
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_save = 1
+
+" gitgutter
+let g:gitgutter_signs = 0
+map <silent> <Leader>gt :GitGutterSignsToggle<CR>

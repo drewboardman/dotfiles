@@ -3,9 +3,10 @@ gitconfig
 i3
 i3status
 tmux
-vim
 xresources
 zsh
 fehbg
 neovim
 vscode
+haskeline
+libinput-gestures
