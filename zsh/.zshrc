@@ -51,8 +51,6 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -92,8 +90,6 @@ alias tunnel="ssh -L 18000:connect-postgres.connect-dev.werally.in:5432 jumpdev"
 export SERVICE_LOCATOR_CONVENTION_SCHEME=dns
 export SERVICE_LOCATOR_CONVENTION_DNS_PATTERN=http://connect.localhost:9001
 
-# DIRCOLORS
-eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 # Example aliases
 alias ll="ls -latrhF"
 alias grep="grep -v grep | grep --color=auto"
@@ -101,7 +97,7 @@ alias pj="cd $HOME/projects"
 alias startvpn="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/US\ East.ovpn --auth-user-pass /etc/openvpn/login.txt --dev tun1"
 alias screen="xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --off"
 alias restartpulse="pulseaudio -k && pulseaudio --start && i3-msg restart"
-alias path="sed 's/:/\n/g' <<< "$PATH""
+alias path="tr : '\n' <<<$PATH"
 alias vim="nvim"
 alias codemettle="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/codemettle.ovpn --dev tun0"
 alias dota="setxkbmap -option && setxkbmap -option caps:none && xmodmap -e 'keycode 66=F13'"
