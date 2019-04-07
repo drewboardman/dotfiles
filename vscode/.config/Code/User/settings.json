@@ -31,5 +31,6 @@
             "after": ["<C-w>", "l"]
           }
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Jellybeans"
 }
