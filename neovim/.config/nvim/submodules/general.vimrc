@@ -11,6 +11,7 @@ set hlsearch
 set backspace=2   " Backspace deletes like most programs in insert mode
 set ignorecase
 set smartcase
+set wildignorecase " this is for file autocompletion in `:e`
 set history=50
 set scrolloff=5
 set ruler         " show the cursor position all the time

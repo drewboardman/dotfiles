@@ -90,7 +90,10 @@ alias tunnel="ssh -L 18000:connect-postgres.connect-dev.werally.in:5432 jumpdev"
 export SERVICE_LOCATOR_CONVENTION_SCHEME=dns
 export SERVICE_LOCATOR_CONVENTION_DNS_PATTERN=http://connect.localhost:9001
 
-# Example aliases
+# DIRCOLORS
+eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
+
+# ------ alias -------
 alias ll="ls -latrhF"
 alias grep="rg"
 alias pj="cd $HOME/projects"
@@ -102,15 +105,19 @@ alias vim="nvim"
 alias dota="setxkbmap -option && setxkbmap -option caps:none && xmodmap -e 'keycode 66=F13'"
 alias undota="setxkbmap -option && setxkbmap -option caps:escape"
 
+# ------ docker -------
 function rmcontainers { sudo docker rm $(sudo docker ps -a -f status=exited -q) }
 function rmimages { sudo docker rmi $(sudo docker images -a -q) $(sudo docker images -f "dangling=true" -q) }
 
+# ------ FZF stuff --------
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Use better defaults
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export FZF_DEFAULT_COMMAND='fd --type f -H  --color=never'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd -H --type d . --color=never'
+
 # Re-bind CTRL_T to CTRL_P
 bindkey -r '^T'
 bindkey '^P' fzf-file-widget
