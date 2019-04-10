@@ -32,5 +32,9 @@
           }
     ],
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Jellybeans"
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "editor.renderIndentGuides": false,
+    "workbench.colorTheme": "Jellybeams"
 }

@@ -47,8 +47,6 @@ let g:ale_haskell_stack_ghc_options = '
       \ -Wincomplete-record-updates
       \ -Wincomplete-uni-patterns
       \ -Wredundant-constraints
-      \ -Wmissing-import-lists
-      \ -Wmissing-export-lists
       \'
 
 " Ctrl-{hjkl} for navigating out of terminal panes
