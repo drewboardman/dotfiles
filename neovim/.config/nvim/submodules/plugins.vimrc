@@ -27,6 +27,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Haskell
 Plugin 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plugin 'neovimhaskell/haskell-vim'
+" Plugin 'bitc/vim-hdevtools'
 Plugin 'alx741/vim-stylishask'
 
 call vundle#end()            " required
