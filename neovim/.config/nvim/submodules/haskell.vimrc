@@ -35,6 +35,8 @@ augroup END
 
 " ----- w0rp/ale -----
 
+au FileType haskell nnoremap <buffer> <silent> <F2> :ALEDetail<CR>
+
 let g:ale_linters = {}
 let g:ale_linters.haskell = ['stack_ghc', 'hlint']
 let g:ale_fixers = {'haskell': ['brittany', 'hlint']}
