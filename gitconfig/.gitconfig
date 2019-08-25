@@ -12,6 +12,7 @@
 [core]
 	excludesfile = /home/drew/.gitignore_global
 	pager =
+	editor = nvim
 [rebase]
   autosquash = true
 [format]

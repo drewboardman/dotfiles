@@ -12,3 +12,7 @@ if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --color=never --hidden --smart-case --glob "!.git/*"'
   let g:ctrlp_use_caching = 0
 endif
+
+" ctrlp tag mode
+let g:ctrlp_extensions = ['tag']
+map <silent> <Leader>st :CtrlPTag<CR>
