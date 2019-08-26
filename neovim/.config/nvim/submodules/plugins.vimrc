@@ -6,6 +6,7 @@ filetype off                  " required
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin('~/.config/nvim/bundle')
 
+Plugin 'vim-ruby/vim-ruby'
 " VIM
 Plugin 'mileszs/ack.vim'
 Plugin 'lifepillar/vim-mucomplete'

@@ -1,9 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/drew/.oh-my-zsh
-
-# These are the configs to your work VM
-export REACTIVEMQ_AMQ=nio://10.15.1.102:61616
-export SHERPA_DB_ADDRESS=http://10.15.1.102:8983/solr/
+export ZSH=/Users/drew.boardman/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -26,10 +22,7 @@ source $ZSH/oh-my-zsh.sh
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# DISABLE_AUTO_UPDATE="true" # Uncomment the following line to change how often to auto-update (in days).  # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="false"
@@ -58,8 +51,6 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -75,10 +66,9 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+# load rbenv at shell start
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # Haskell packages
 # export PATH="$HOME/.cabal/bin:$PATH"
@@ -93,6 +83,13 @@ export PATH="$HOME/.ghcup/env:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# jumpdev stuff
+alias proxypull="docker pull docker.werally.in/chopshop/playproxy"
+alias tunnel="ssh -L 18000:connect-postgres.connect-dev.werally.in:5432 jumpdev"
+# Rally connect env vars for play proxy
+export SERVICE_LOCATOR_CONVENTION_SCHEME=dns
+export SERVICE_LOCATOR_CONVENTION_DNS_PATTERN=http://connect.localhost:9001
+
 # DIRCOLORS
 eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 
@@ -103,9 +100,8 @@ alias pj="cd $HOME/projects"
 alias startvpn="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/US\ East.ovpn --auth-user-pass /etc/openvpn/login.txt --dev tun1"
 alias screen="xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --off"
 alias restartpulse="pulseaudio -k && pulseaudio --start && i3-msg restart"
-alias path="sed 's/:/\n/g' <<< "$PATH""
+alias path="tr : '\n' <<<$PATH"
 alias vim="nvim"
-alias codemettle="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/codemettle.ovpn --dev tun0"
 alias dota="setxkbmap -option && setxkbmap -option caps:none && xmodmap -e 'keycode 66=F13'"
 alias undota="setxkbmap -option && setxkbmap -option caps:escape"
 
@@ -125,3 +121,4 @@ export FZF_ALT_C_COMMAND='fd -H --type d . --color=never'
 # Re-bind CTRL_T to CTRL_P
 bindkey -r '^T'
 bindkey '^P' fzf-file-widget
+export PATH="/usr/local/sbin:$PATH"
