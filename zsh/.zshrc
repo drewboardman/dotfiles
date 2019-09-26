@@ -83,13 +83,6 @@ export PATH="$HOME/.ghcup/env:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# jumpdev stuff
-alias proxypull="docker pull docker.werally.in/chopshop/playproxy"
-alias tunnel="ssh -L 18000:connect-postgres.connect-dev.werally.in:5432 jumpdev"
-# Rally connect env vars for play proxy
-export SERVICE_LOCATOR_CONVENTION_SCHEME=dns
-export SERVICE_LOCATOR_CONVENTION_DNS_PATTERN=http://connect.localhost:9001
-
 # DIRCOLORS
 eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 
