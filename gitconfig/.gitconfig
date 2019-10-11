@@ -1,6 +1,6 @@
 [user]
-	name = Drew Boardman
-	email = drew.e.boardman@gmail.com
+	name = drew
+	email = drew.boardman@modaoperandi.com
 
 [color]
   ui = auto
@@ -12,6 +12,7 @@
 [core]
 	excludesfile = /home/drew/.gitignore_global
 	pager =
+	editor = nvim
 [rebase]
   autosquash = true
 [format]

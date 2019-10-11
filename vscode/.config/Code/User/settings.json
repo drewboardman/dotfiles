@@ -1,7 +1,7 @@
 {
     "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/bin/nvim",
-    "languageServerHaskell.hieExecutablePath": "/home/drew/.local/bin/hie",
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "languageServerHaskell.hieExecutablePath": "/Users/drew.boardman/.local/bin/hie",
     "editor.fontSize": 17,
     "vim.hlsearch": true,
     "editor.fontFamily": "Source Code Pro Medium",
