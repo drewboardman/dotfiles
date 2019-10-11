@@ -125,3 +125,5 @@ export FZF_ALT_C_COMMAND='fd -H --type d . --color=never'
 # Re-bind CTRL_T to CTRL_P
 bindkey -r '^T'
 bindkey '^P' fzf-file-widget
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

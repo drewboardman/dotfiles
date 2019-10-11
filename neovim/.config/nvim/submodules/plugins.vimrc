@@ -23,6 +23,7 @@ Plugin 'sbdchd/neoformat'
 Plugin 'w0rp/ale'
 Plugin 'godlygeek/tabular'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'neoclide/coc.nvim'
 
 " Haskell
 Plugin 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
