@@ -1,38 +1,40 @@
-" ---------- Start Vundle Block --------------
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.config/nvim/plugged')
 
-Plugin 'vim-ruby/vim-ruby'
+" Make sure you use single quotes
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+
+Plug 'vim-ruby/vim-ruby'
 " VIM
-Plugin 'mileszs/ack.vim'
-Plugin 'lifepillar/vim-mucomplete'
-Plugin 'vim-airline/vim-airline'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-commentary'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sbdchd/neoformat'
-Plugin 'w0rp/ale'
-Plugin 'godlygeek/tabular'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'neoclide/coc.nvim'
+Plug 'mileszs/ack.vim'
+" Plug 'lifepillar/vim-mucomplete'
+Plug 'vim-airline/vim-airline'
+Plug 'gmarik/Vundle.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-commentary'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'sbdchd/neoformat'
+Plug 'w0rp/ale'
+Plug 'godlygeek/tabular'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Haskell
-Plugin 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
-Plugin 'neovimhaskell/haskell-vim'
-" Plugin 'bitc/vim-hdevtools'
-Plugin 'alx741/vim-stylishask'
+Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
+Plug 'neovimhaskell/haskell-vim'
+" Plug 'bitc/vim-hdevtools'
+Plug 'jaspervdj/stylish-haskell'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-" ---------- End Vundle Block --------------
-
+" Initialize plugin system
+call plug#end()
