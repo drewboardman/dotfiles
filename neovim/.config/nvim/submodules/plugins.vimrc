@@ -13,7 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-ruby/vim-ruby'
 " VIM
 Plug 'mileszs/ack.vim'
-Plug 'lifepillar/vim-mucomplete'
+" Plug 'lifepillar/vim-mucomplete'
 Plug 'vim-airline/vim-airline'
 Plug 'gmarik/Vundle.vim'
 Plug 'airblade/vim-gitgutter'
@@ -34,7 +34,7 @@ Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'neovimhaskell/haskell-vim'
 " Plug 'bitc/vim-hdevtools'
 Plug 'jaspervdj/stylish-haskell'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system
 call plug#end()

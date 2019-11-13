@@ -14,7 +14,8 @@
       ],
       "initializationOptions": {
         "languageServerHaskell": {
-          "hlintOn": true
+          "hlintOn": true,
+          "completionSnippetsOn": true
         }
       }
     }

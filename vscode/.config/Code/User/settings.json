@@ -1,14 +1,21 @@
 {
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/bin/nvim",
-    "languageServerHaskell.hieExecutablePath": "/Users/drew/.local/bin/hie",
+    "languageServerHaskell.hieExecutablePath": "/home/drew/.local/bin/hie",
     "editor.fontSize": 17,
     "vim.hlsearch": true,
     "editor.fontFamily": "Source Code Pro Medium",
     "keyboard.dispatch": "keyCode", // this is for remapping caps to ESC in Linux
     "vim.leader": " ",
     "vim.surround": true,
+    "vim.handleKeys": {
+        "<C-w>": false
+    },
     "editor.renderLineHighlight": "none",
+    "brittany.stackEnable": true,
+    "files.associations": {
+      "*.hs": "haskell"
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<Leader>", "f", "s"],
@@ -36,5 +43,10 @@
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
     "editor.renderIndentGuides": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000,
+    "[haskell]": {
+      "editor.defaultFormatter": "MaxGabriel.brittany"
+    },
     "workbench.colorTheme": "Jellybeams"
 }

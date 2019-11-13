@@ -97,6 +97,7 @@ alias path="tr : '\n' <<<$PATH"
 alias vim="nvim"
 alias dota="setxkbmap -option && setxkbmap -option caps:none && xmodmap -e 'keycode 66=F13'"
 alias undota="setxkbmap -option && setxkbmap -option caps:escape"
+alias aws-sso="aws-google-auth -d 43200 -ak"
 
 # ------ docker -------
 function rmcontainers { sudo docker rm $(sudo docker ps -a -f status=exited -q) }
@@ -114,6 +115,9 @@ export FZF_ALT_C_COMMAND='fd -H --type d . --color=never'
 # Re-bind CTRL_T to CTRL_P
 bindkey -r '^T'
 bindkey '^P' fzf-file-widget
+
+# moda stuff
+source ~/.modarc
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
