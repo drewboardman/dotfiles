@@ -24,11 +24,12 @@ function! HaskellFormat(which) abort
 endfunction
 
 " Key bindings
-augroup haskellStylish
-  au!
-  " Just stylish-haskell
-  au FileType haskell nnoremap <leader>hf :call HaskellFormat('stylish')<CR>
-augroup END
+" NOTE: I've moved formattting to coc.nvim section!!!!
+" augroup haskellStylish
+"   au!
+"   " Just stylish-haskell
+"   au FileType haskell nnoremap <leader>hf :call HaskellFormat('stylish')<CR>
+" augroup END
 
 " ----- w0rp/ale -----
 

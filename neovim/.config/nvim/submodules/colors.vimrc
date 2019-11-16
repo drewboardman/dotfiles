@@ -30,6 +30,12 @@ highlight TabLine ctermbg=238 ctermfg=249 guibg=#404040  guifg=#909090
 highlight TabLineSel ctermbg=238 ctermfg=112 guibg=#404040 guifg=#b0cc55
 
 " Make it obvious where 80 characters is
+highlight CocFloating cterm=NONE guibg=DarkSlateGrey guifg=burlywood
+highlight CocErrorFloat cterm=NONE guibg=DarkSlateGrey guifg=burlywood
+highlight CocWarningFloat cterm=NONE guibg=DarkSlateGrey guifg=burlywood
+highlight CocInfoFloat cterm=NONE guibg=DarkSlateGrey guifg=burlywood
+
+" Make it obvious where 80 characters is
 highlight ColorColumn guibg=darkmagenta guifg=white
 call matchadd('ColorColumn', '\%81v', 100)
 
