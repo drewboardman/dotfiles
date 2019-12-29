@@ -2,7 +2,8 @@
   "diagnostic.displayByAle": true,
   "languageserver": {
     "haskell": {
-      "command": "hie-wrapper",
+      "command": "stack",
+      "args": ["exec", "hie-wrapper"],
       "rootPatterns": [
         "stack.yaml",
         "cabal.config",
