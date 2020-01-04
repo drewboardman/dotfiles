@@ -52,8 +52,8 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-" Use P to show errors (this does not work right now)
-nmap <silent> P <Plug>(coc-diagnostic-info)
+" Use P to show errors (this only works with hover diagnostics)
+" nmap <silent> P <Plug>(coc-diagnostic-info)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

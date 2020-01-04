@@ -22,8 +22,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# load rbenv at shell start
-export PATH="$HOME/.rbenv/bin:$PATH"
+# common binaries path
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # Haskell/Stack packages installation dir

@@ -30,7 +30,7 @@ Plug 'godlygeek/tabular'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Haskell
-Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
+" Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'neovimhaskell/haskell-vim'
 " Plug 'bitc/vim-hdevtools'
 Plug 'jaspervdj/stylish-haskell'
