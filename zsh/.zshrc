@@ -31,10 +31,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # export TERM=xterm-256color
 # export TERM=rxvt-unicode-256color
 
-# need rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # DIRCOLORS
 eval `dircolors $HOME/.dir_colors/dircolors.ansi-dark`
 

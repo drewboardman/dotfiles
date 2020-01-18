@@ -1,8 +1,10 @@
 {
   "languageserver": {
     "haskell": {
-      "command": "stack",
-      "args": ["exec", "hie-wrapper"],
+      "command": "ghcide",
+      "args": [
+        "--lsp"
+      ],
       "rootPatterns": [
         "stack.yaml",
         "cabal.config",
