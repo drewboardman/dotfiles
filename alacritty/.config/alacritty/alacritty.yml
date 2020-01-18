@@ -5,24 +5,24 @@ font:
   normal:
     # family: Iosevka
     # family: "Fira Code"
-    family: "Source Code Pro"
+    family: "Source Code Pro Medium"
     # style: Retina
 
   # The bold font face
   bold:
     family: Iosevka
     # family: "Fira Code"
-    family: "Source Code Pro"
+    family: "Source Code Pro Medium"
 
   # The italic font face
   italic:
     # family: Iosevka
     # family: "Fira Code"
-    family: "Source Code Pro"
+    family: "Source Code Pro Medium"
     # style: "Medium Italic"
 
   # Point size of the font
-  size: 14.0
+  size: 13.0
 
 # Colors (Tomorrow Night)
 colors:
