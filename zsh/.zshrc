@@ -19,6 +19,10 @@ source $ZSH/oh-my-zsh.sh
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="mm/dd/yyyy"
 
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=$HOME/.zsh_history
+
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
@@ -51,13 +55,16 @@ function rmcontainers { sudo docker rm $(sudo docker ps -a -f status=exited -q) 
 function rmimages { sudo docker rmi $(sudo docker images -a -q) $(sudo docker images -f "dangling=true" -q) }
 
 # ------ FZF stuff --------
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # Use better defaults
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-export FZF_DEFAULT_COMMAND='fd --type f -H  --color=never'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND='fd -H --type d . --color=never'
+
+# these arent' working on the newest version
+# export FZF_DEFAULT_COMMAND='fd --type f -H  --color=never'
+# export FZF_ALT_C_COMMAND='fd -H --type d . --color=never'
 
 # Re-bind CTRL_T to CTRL_P
 bindkey -r '^T'
