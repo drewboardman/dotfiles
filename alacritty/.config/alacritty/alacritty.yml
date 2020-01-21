@@ -10,7 +10,7 @@ font:
 
   # The bold font face
   bold:
-    family: Iosevka
+    # family: Iosevka
     # family: "Fira Code"
     family: "Source Code Pro Medium"
 
