@@ -14,6 +14,16 @@ plugins=(bundler git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+# ssh stuff
+# this keychain doesn't work
+# eval $(keychain --eval --quiet id_ed25519 id_rsa ~/.keys/my_custom_key)
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    eval "$(<"$XDG_RUNTIME_DIR/ssh-agent.env")"
+fi
+
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
