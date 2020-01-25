@@ -10,7 +10,7 @@ else
   ZSH_THEME="gentoo"
 fi
 
-plugins=(bundler git vi-mode)
+plugins=(bundler git vi-mode nix-shell)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,12 +53,11 @@ alias ll="ls -latrhF"
 alias grep="rg"
 alias code="cd $HOME/code"
 alias startvpn="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/US\ East.ovpn --auth-user-pass /etc/openvpn/login.txt --dev tun1"
-alias screen="xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --off"
+alias i3lock="i3lock -i ~/Pictures/wallpaper.png"
 alias restartpulse="pulseaudio -k && pulseaudio --start && i3-msg restart"
 alias path="tr : '\n' <<<$PATH"
 alias vim="nvim"
 alias setcaps="setxkbmap -option && setxkbmap -option caps:escape"
-alias aws-sso="aws-google-auth -d 43200 -ak"
 
 # ------ docker -------
 function rmcontainers { sudo docker rm $(sudo docker ps -a -f status=exited -q) }
@@ -82,3 +81,12 @@ bindkey '^P' fzf-file-widget
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# this is for direnv and nix stuff
+eval "$(direnv hook zsh)"
+
+# indicate whether or not you are in a nix-shell
+# if [[ ${+NIX_BUILD_SHELL} || ${NIX_INDENT_MAKE} ]]; then
+if (( ${+NIX_BUILD_SHELL} )) then
+  PS1+="(nix-shell) > "
+fi
