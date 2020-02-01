@@ -22,12 +22,15 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-commentary'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sbdchd/neoformat'
 Plug 'w0rp/ale'
 Plug 'godlygeek/tabular'
 Plug 'christoomey/vim-tmux-navigator'
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Haskell
 " Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }

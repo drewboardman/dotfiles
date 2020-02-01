@@ -24,5 +24,5 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_save = 1
 
 " gitgutter
-let g:gitgutter_signs = 0
+let g:gitgutter_signs = 1
 map <silent> <Leader>gt :GitGutterSignsToggle<CR>
