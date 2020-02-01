@@ -41,7 +41,10 @@ mouse_warping none
 focus_follows_mouse no
 
 # set wallpaper
-exec sh ~/.fehbg
+exec feh --bg-scale ~/Pictures/earth_from_space.jpg
+
+# get mouse speed correct
+exec xinput --set-prop 'pointer:Logitech Gaming Mouse G600' 'libinput Accel Speed' -0.78
 
 # start a terminal
 bindsym $mod+Return exec alacritty

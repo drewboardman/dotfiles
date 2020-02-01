@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-center' '/home/drew/tmp/test.png' 
+feh --no-fehbg --bg-scale '/home/drew/Pictures/earth_from_space.jpg' 
