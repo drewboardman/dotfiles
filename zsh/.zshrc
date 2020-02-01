@@ -1,9 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# This changes the theme when you're ssh'ed - that way you won't accidentally
+# do something stupid
 if [[ -n $SSH_CLIENT || -n $REMOTEHOST ]] then
   ZSH_THEME="agnoster"
 else
@@ -15,7 +14,9 @@ plugins=(bundler git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # ssh stuff
-# this keychain doesn't work
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Arch has a package called keychain, but this keychain doesn't work
 # eval $(keychain --eval --quiet id_ed25519 id_rsa ~/.keys/my_custom_key)
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
@@ -33,14 +34,13 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$HOME/.zsh_history
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # common binaries path
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # Haskell/Stack packages installation dir
 export PATH="$HOME/.local/bin:$PATH"
+# Haskell/cabal packages installation dir
+export PATH="$HOME/.cabal/bin:$PATH"
 
 # export TERM=xterm-256color
 # export TERM=rxvt-unicode-256color
@@ -56,7 +56,7 @@ alias startvpn="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/US\ East.o
 alias screen="xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --off"
 alias restartpulse="pulseaudio -k && pulseaudio --start && i3-msg restart"
 alias path="tr : '\n' <<<$PATH"
-alias vim="nvim"
+alias vim="NVIM_COC_LOG_LEVEL=debug nvim"
 alias setcaps="setxkbmap -option && setxkbmap -option caps:escape"
 alias aws-sso="aws-google-auth -d 43200 -ak"
 

@@ -4,7 +4,7 @@
 let g:ackprg = 'rg --hidden --vimgrep --no-heading --smart-case --glob "!.git/*"'
 
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack! <cword><cr>
+nnoremap <Leader>b :Ack! <cword><cr>
 
 " This tell ctrlp to use rg as well
 if executable('rg')
@@ -17,3 +17,7 @@ endif
 " ctrlp tag mode
 let g:ctrlp_extensions = ['tag']
 map <silent> <Leader>st :CtrlPTag<CR>
+
+" No longer using CtrlP, this is for fzf.vim
+nnoremap <C-p> :Files<Cr>
+" set -gx FZF_DEFAULT_COMMAND  'rg --files --no-ignore-vcs --hidden'
