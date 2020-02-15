@@ -35,7 +35,7 @@ SAVEHIST=1000
 HISTFILE=$HOME/.zsh_history
 
 # common binaries path
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # Haskell/Stack packages installation dir
 export PATH="$HOME/.local/bin:$PATH"
@@ -55,7 +55,7 @@ alias code="cd $HOME/code"
 alias startvpn="cd /etc/openvpn && sudo openvpn --config /etc/openvpn/US\ East.ovpn --auth-user-pass /etc/openvpn/login.txt --dev tun1"
 alias i3lock="i3lock -i ~/Pictures/wallpaper.png"
 alias restartpulse="pulseaudio -k && pulseaudio --start && i3-msg restart"
-alias path="tr : '\n' <<<$PATH"
+alias path="tr : $'\n' <<<$(echo $PATH)"
 alias vim="NVIM_COC_LOG_LEVEL=debug nvim"
 alias setcaps="setxkbmap -option && setxkbmap -option caps:escape"
 
@@ -68,7 +68,8 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 # Use better defaults
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+# export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # these arent' working on the newest version
@@ -90,3 +91,10 @@ eval "$(direnv hook zsh)"
 if (( ${+NIX_BUILD_SHELL} )) then
   PS1+="(nix-shell) > "
 fi
+
+# java shit because wework is dumb as f
+export PATH="$HOME/code/lib/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# nix-stuff (keep this at the bottom)
+# if [ -e /home/drew/.nix-profile/etc/profile.d/nix.sh ]; then . /home/drew/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
