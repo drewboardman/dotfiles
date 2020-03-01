@@ -6,7 +6,9 @@
         "--lsp"
       ],
       "rootPatterns": [
-        "stack.yaml",
+        ".stack.yaml",
+        ".hie-bios",
+        "BUILD.bazel",
         "cabal.config",
         "package.yaml"
       ],

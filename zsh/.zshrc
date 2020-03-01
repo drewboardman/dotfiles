@@ -41,6 +41,8 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
 # Haskell/cabal packages installation dir
 export PATH="$HOME/.cabal/bin:$PATH"
+# Haskell/ghcup directory
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
 # export TERM=xterm-256color
 # export TERM=rxvt-unicode-256color
