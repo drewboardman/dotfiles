@@ -34,6 +34,7 @@ Plug 'junegunn/fzf.vim'
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
 Plug 'jaspervdj/stylish-haskell'
+Plug 'LnL7/vim-nix'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system

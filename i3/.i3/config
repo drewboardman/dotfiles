@@ -47,7 +47,7 @@ exec feh --bg-scale ~/Pictures/earth_from_space.jpg
 exec xinput --set-prop 'pointer:Logitech Gaming Mouse G600' 'libinput Accel Speed' -0.78
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec WINIT_HIDPI_FACTOR=1 alacritty
 
 # print screen like Mac
 bindsym --release Shift+Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Desktop'
@@ -114,7 +114,7 @@ bindsym $mod+a focus parent
 
 # start stuff at startup
 exec --no-startup-id i3-msg 'workspace 1: browser; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace 2: terminal; exec /usr/bin/alacritty'
+exec --no-startup-id i3-msg 'workspace 2: terminal; exec WINIT_HIDPI_FACTOR=1 /usr/bin/alacritty'
 exec --no-startup-id i3-msg 'workspace 5: servers; exec /usr/bin/pavucontrol'
 
 # switch to workspace

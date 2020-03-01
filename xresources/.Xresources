@@ -60,3 +60,10 @@
 ! scrollbar is ugly
  URxvt.scrollBar: false
 
+/* ! Fonts {{{ */
+/* Xft.antialias: true */
+/* Xft.hinting:   true */
+/* Xft.rgba:      rgb */
+/* Xft.hintstyle: hintfull */
+/* Xft.dpi:       282 */
+/* ! }}} */
