@@ -2,6 +2,9 @@
 	name = Drew Boardman
 	email = drew.e.boardman@gmail.com
 
+[includeIf "gitdir:~/work/"]
+  path = ~/work/.gitconfig
+
 [color]
   ui = auto
 [alias]

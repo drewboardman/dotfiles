@@ -9,7 +9,7 @@ else
   ZSH_THEME="gentoo"
 fi
 
-plugins=(bundler git vi-mode nix-shell)
+plugins=(bundler git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,6 +36,7 @@ HISTFILE=$HOME/.zsh_history
 
 # common binaries path
 # export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export PATH="$HOME/bin:$PATH"
 
 # Haskell/Stack packages installation dir
 export PATH="$HOME/.local/bin:$PATH"

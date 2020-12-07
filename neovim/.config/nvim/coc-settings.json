@@ -1,4 +1,6 @@
 {
+  "metals.enable": true,
+  "metals.javeHome": "/usr/lib/jvm/default",
   "languageserver": {
     "haskell": {
       "command": "ghcide",
