@@ -3,6 +3,7 @@
     "vim.neovimPath": "/usr/bin/nvim",
     "languageServerHaskell.hieExecutablePath": "/home/drew/.local/bin/hie",
     "editor.fontSize": 17,
+    "keyboard.dispatch": "keyCode",
     "vim.hlsearch": true,
     "editor.fontFamily": "Source Code Pro Medium",
     "vim.leader": "<space>",

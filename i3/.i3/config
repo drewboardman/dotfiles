@@ -115,7 +115,6 @@ bindsym $mod+a focus parent
 # start stuff at startup
 exec --no-startup-id i3-msg 'workspace 1: browser; exec /usr/bin/firefox'
 exec --no-startup-id i3-msg 'workspace 2: terminal; exec WINIT_HIDPI_FACTOR=1 /usr/bin/alacritty'
-exec --no-startup-id i3-msg 'workspace 5: servers; exec /usr/bin/pavucontrol'
 
 # switch to workspace
 bindsym $mod+1 workspace 1: browser

@@ -19,6 +19,7 @@
 [rebase]
   autosquash = true
 [format]
-  pretty = format:'%Cred%h%Creset -%Cblue%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset'
+  ; pretty = format:'%Cred%h%Creset -%Cblue%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset'
+  pretty = format:'%Cred%h%Creset - %Cblue%an%Creset -%C(yellow)%d%Creset %s - %Cgreen%cr %Cgreen(%ci)%Creset'
 [push]
 	default = matching
