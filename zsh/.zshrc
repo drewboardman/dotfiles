@@ -17,13 +17,15 @@ source $ZSH/oh-my-zsh.sh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Arch has a package called keychain, but this keychain doesn't work
-# eval $(keychain --eval --quiet id_ed25519 id_rsa ~/.keys/my_custom_key)
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
-fi
-if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    eval "$(<"$XDG_RUNTIME_DIR/ssh-agent.env")"
-fi
+eval $(keychain --eval --agents ssh -Q --quiet id_rsa work --nogui)
+
+## Without keychain
+# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+# fi
+# if [[ ! "$SSH_AUTH_SOCK" ]]; then
+#     eval "$(<"$XDG_RUNTIME_DIR/ssh-agent.env")"
+# fi
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -82,6 +84,10 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # Re-bind CTRL_T to CTRL_P
 bindkey -r '^T'
 bindkey '^P' fzf-file-widget
+
+# ruby stuff
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

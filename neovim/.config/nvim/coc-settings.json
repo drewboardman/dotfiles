@@ -3,7 +3,7 @@
   "metals.javeHome": "/usr/lib/jvm/default",
   "languageserver": {
     "haskell": {
-      "command": "ghcide",
+      "command": "haskell-language-server-wrapper",
       "args": [
         "--lsp"
       ],

@@ -63,4 +63,8 @@ set splitright
 " Markdown specific stuff
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=150 fo+=t textwidth=80
 
+" allow mouse mode
 set mouse=a
+
+" auto-save on lost focus
+:au FocusLost * :wa
